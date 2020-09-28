@@ -30,3 +30,4 @@ const logout = e => {
         </div>
     )
 }
+export default Topbar
