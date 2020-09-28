@@ -1,15 +1,12 @@
 .root {
-
     height: 100vh;
- 
   }
 
   .image {
- 
   background-repeat: 'no-repeat';
   background-size: cover;
   background-position: center;
-  background-image: url(https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg);
+  /* background-image: url(https://image.freepik.com/free-photo/cropped-image-businessman-sitting-by-table-cafe-analyzing-indicators_171337-5597.jpg); */
   }
 
   .paper {
