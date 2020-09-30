@@ -11,7 +11,6 @@ import Login from './components/Login'
 import Topbar from './components/Topbar'
 import Home from './components/Home'
 import Stock from './components/Stock'
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 
 
 class App extends Component {
@@ -49,27 +48,15 @@ class App extends Component {
     return (
 
       <div>
-        <Layout>
-          <div>
-            <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white', fontSize: '30px', borderRadius: '20px', backgroundColor: 'black', padding: '10px', margin: '10px' }} to="/">My Portfolio</Link>} scroll>
-              <Navigation>
-                <Link style={{ fontSize: '25px' }} to="/">Home</Link >
-                <Link style={{ fontSize: '25px' }} to="/Stock">Stock</Link>
-              </Navigation>
-            </Header>
-            <Drawer title={<Link style={{ textDecoration: 'none', color: 'black' }} to="/">STOCK</Link>}>
-              <Navigation>
-                <Link style={{ fontSize: '25px' }} to="/">Home</Link >
-                <Link style={{ fontSize: '25px' }} to="/Stock">Stock</Link>
-              </Navigation>
-            </Drawer>
-          </div>
-          <BrowserRouter>
-            <Route exact path="/" component={Home} />
-            <Route path="/Stock" component={Stock} />
-            <Route path="/login" component={Login} />
-          </BrowserRouter>
-        </Layout>
+        <div className="Topbar">
+          <Topbar />
+        </div>
+        <BrowserRouter>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Home" component={Home} />
+          <Route path="/Stock" component={Stock} />
+          <Route path="/login" component={Login} />
+        </BrowserRouter>
       </div>
 
     );
