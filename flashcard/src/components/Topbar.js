@@ -1,33 +1,68 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav, Navbar, FormControl, Button, Form } from 'react-bootstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import fire from '../config/fire';
 import Login from './Login'
 import Home from './Home'
 import Stock from './Stock'
+import LeftMenu from './LeftMenu'
+import RightMenu from './RightMenu'
+import { Drawer, Button } from 'antd';
 
-const Topbar = () => {
+class Topbar extends Component {
 
-const logout = e => {
-    fire.auth().signOut();
-}
+    logout = e => {
+        fire.auth().signOut();
+    }
 
-    return (
-        <div>
-            
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/Home">Home</Navbar.Brand>
-                <Nav className="mr-auto">
-                 
-                    <Nav.Link href="/Stock">Stock</Nav.Link>
-                </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                    <Button variant="warning" style={{ margin: 10 }} onClick={logout}>LOGOUT</Button>
-                </Form >
-            </Navbar>
-        </div>
-    )
+    state = {
+        current: 'mail',
+        visible: false
+    }
+
+    showDrawer = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+    onClose = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    render() {
+        return (
+            <div>
+                <nav className="menuBar">
+                    <div className="logo">
+                        <a href="">logo</a>
+                    </div>
+                    <div className="menuCon">
+                        <div className="leftMenu">
+                            <LeftMenu />
+                        </div>
+                        <div className="rightMenu">
+                            <RightMenu />
+                        </div>
+                        <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
+                            <span className="barsBtn"></span>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer"
+                            placement="left"
+                            closable={false}
+                            onClose={this.onClose}
+                            visible={this.state.visible}
+                        >
+                            <LeftMenu />
+                            <RightMenu />
+                        </Drawer>
+
+                    </div>
+                </nav>
+            </div>
+        )
+    }
 }
 export default Topbar

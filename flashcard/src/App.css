@@ -1,359 +1,99 @@
-body {
-  font-family: 'Titillium Web', sans-serif
-  }
-  
-  .header-color {
-    background: #833ab4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-  
-  .landing-grid {
-    background: #833ab4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .projects-grid {
-    display: flex;
-  }
-  
-  /* Resume Page css */
-  .resume-right-col {
-    background: #27221F;
-    color: white;
-    padding: 2em;
-  
-  }
-  
-  /* contact page css */
-  
-  .contact-body {
-    margin: auto;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    padding-top: 2em;
-  }
-  
-  .contact-grid {
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-    height: 550px;
-    background: white;
-    color: black;
-    margin-bottom: 20px;
-  }
-  
-  .contact-grid h2 {
-    font-family: 'Anton', sans-serif;
-  }
-  
-  .contact-grid p {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: bold;
-  }
-  
-  .contact-grid hr {
-    border-top: 5px dotted black;
-    width: 50%;
-    margin: auto;
-  }
-  
-  .contact-list i {
-    font-size: 66px;
-    padding-right: 5rem;
-  }
-  
-  
-  /* contact page css */
-  
-  .avatar-img {
-    height: 360px;
-    padding-top: 5em;
-    cursor: pointer;
-    border-radius: 100px;
-    
-  }
-  
-  .banner-text {
-    background-color: black;
-    opacity: .8;
-    width: 75%;
-    margin: auto;
-    border-radius: 30px;
-  }
-  
-  .banner-text h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .banner-text p {
-    color: white;
-    font-size: 20px;
-    padding: 1em;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    margin: auto;
-  }
-  
-  .social-links i {
-    color: white;
-    font-size: 5em;
-    padding: 8px;
-  }
-  
-  
-  .hover-fx {
-    font-size: 36px;
+@import '~antd/dist/antd.css';
+
+.menuBar{
+  padding: 0 20px;
+  border-bottom: solid 1px #e8e8e8;
+  overflow: auto;
+  box-shadow: 0 0 30px #f3f1f1;
+}
+.logo{
+  width: 150px;
+  float: left;
+}
+.logo a{
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+  text-transform: capitalize;
+}
+.menuCon{
+  width: calc(100% - 150px);
+  float: left;
+}
+.menuCon .ant-menu-item{
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title{
+  padding: 10px 20px;
+}
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+  padding: 10px 15px;
+}
+.menuCon .ant-menu-horizontal{
+  border-bottom: none;
+}
+.menuCon .leftMenu{
+  float: left;
+}
+.menuCon .rightMenu{
+  float: right;
+}
+.barsMenu{
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+.barsBtn{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #1890ff;
+  position: relative;
+}
+.barsBtn:after,.barsBtn:before{
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: #1890ff;
+}
+.barsBtn:after{
+  top: auto;
+  bottom: -6px;
+}
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover{
+  border-bottom-color: transparent;
+}
+
+@media(max-width: 767px){
+  .barsMenu{
     display: inline-block;
-    cursor: pointer;
-    margin: 15px;
-    width: 80px;
-    height: 80px;
-    line-height: 84px;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: 300ms;
   }
-  
-  .hover-fx1 {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    content: '';
-    box-sizing: content-box;
-    box-shadow: 0 0 0 3px #fff;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: 300ms;
+  .leftMenu,.rightMenu{
+    display: none;
   }
-  
-  .hover-fx {
-    background-color: #fff;
-    color: #00989A;
+  .logo a{
+    margin-left: -20px;
   }
-  
-  .hover-fx2{
-    opacity: 1;
-    transform: scale(1.15);
+  .menuCon .ant-menu-item, .menuCon .ant-menu-submenu-title{
+    padding: 1px 20px;
   }
-  
-  @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300i,300,400,400i,500,700");
-  
-  .app {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 20px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-border-before: 1px;
-    border-radius: 8px;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  .logo a{
+    padding: 10px 20px;
   }
-  
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .card-container {
-    border: 2px solid rgba(0, 0, 0, 0.4);
-    border-top: none;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
-  .top-image {
-    margin-top: 24px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    height: 25px;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .shift-side-space {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-  
-  .border-radius {
-    border-radius: 30px;
-  }
-  /* #root {
- 
-        no-repeat,
-      rgb(119, 199, 252);
-    background-size: cover;
-  } */
-  .quote-bg {
-    height: 200px;
-  }
-  .chagneSkill {
-    text-align: end;
-    position: relative;
-    top: -40px;
-    font-weight: 500;
-    font-size: 0.5em;
-  }
-  .fa-js-square:hover {
-    color: yellow;
-  }
-  .fa-react:hover {
-    color: aqua;
-  }
-  .fa-html5:hover {
-    color: orangered;
-  }
-  .fa-node-js:hover {
-    color: green;
-  }
-  #nestjs:hover {
-    filter: none;
-  }
-  #nestjs {
-    filter: grayscale(1);
-  }
-  .fa-git:hover {
-    color: orangered;
-  }
-  .fa-docker:hover {
-    color: aquamarine;
-  }
-  #mysql:hover {
-    filter: none;
-  }
-  #mysql {
-    filter: grayscale(1);
-  }
-  #firebase:hover {
-    filter: none;
-  }
-  #firebase {
-    filter: grayscale(1);
-  }
-  #jquery:hover {
-    filter: none;
-  }
-  #jquery {
-    filter: grayscale(1);
-  }
-  #mongodb:hover {
-    filter: none;
-  }
-  #mongodb {
-    filter: grayscale(1);
-  }
-  .fa-vuejs:hover {
-    color: green;
-  }
-  #flutter:hover {
-    filter: none;
-  }
-  #flutter {
-    filter: grayscale(1);
-  }
-  .fa-css3-alt:hover {
-    color: blue;
-  }
-  #opencv:hover {
-    filter: none;
-  }
-  #opencv {
-    filter: grayscale(1);
-  }
-  #tensorflow:hover {
-    filter: none;
-  }
-  #tensorflow {
-    filter: grayscale(1);
-  }
-  .card {
-    width: 100%;
-  }
-  .card:hover {
-    z-index: 100;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
-  }
-  .react-github-calendar__title {
-    visibility: hidden;
-  }
-  .contributions {
-    position: relative;
-    top: 35px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-left: 150px;
-  }
-  .text-quote{
-    color: black;
-    font-size: 2em;
-    font-weight: 300;
-    font-style: italic;
-  }
-  .text-quote-big{
-    color: black;
-    font-size: 1.7em;
-    font-weight: 300;
-    font-style: italic;
-  }
-  @media only screen and (max-width: 1100px) {
-    .text-quote{
-      color: black;
-      font-size: 1em;
-      font-weight: 300;
-      font-style: italic;
-    }
-    .text-quote-big{
-      color: black;
-      font-size: 0.8em;
-      font-weight: 300;
-      font-style: italic;
-    }
-  }
+}
