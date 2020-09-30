@@ -10,7 +10,7 @@ class LeftMenu extends Component {
     return (
    <Menu mode="horizontal">
        <Menu.Item key="mail">
-          <a href="">Home</a>
+          <a href="/">Home</a>
         </Menu.Item>
         <SubMenu title={<span>Blogs</span>}>
           <MenuItemGroup title="Item 1">
