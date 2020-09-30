@@ -27,7 +27,7 @@ class Topbar extends Component {
     };
     onClose = () => {
         this.setState({
-            visible: true,
+            visible: false,
         });
     };
 
@@ -35,17 +35,7 @@ class Topbar extends Component {
         return (
             <div>
                 <nav className="menuBar">
-                    <div className="logo">
-                        <a href="">logo</a>
-                    </div>
-                    <div className="menuCon">
-                        <div className="leftMenu">
-                            <LeftMenu />
-                        </div>
-                        <div className="rightMenu">
-                            <RightMenu />
-                        </div>
-                        <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
+                <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
                             <span className="barsBtn"></span>
                         </Button>
                         <Drawer
@@ -58,7 +48,16 @@ class Topbar extends Component {
                             <LeftMenu />
                             <RightMenu />
                         </Drawer>
-
+                    <div className="logo">
+                        <a href="">STOCK</a>
+                    </div>
+                    <div className="menuCon">
+                        <div className="leftMenu">
+                            <LeftMenu />
+                        </div>
+                        <div className="rightMenu">
+                            <RightMenu />
+                        </div>
                     </div>
                 </nav>
             </div>
