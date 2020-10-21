@@ -1,0 +1,31 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.3.0",
+    "@typegoose/typegoose": "^7.4.1",
+    "apollo-server-express": "^2.18.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "mongose": "0.0.2-security",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "reflect-metadata": "^0.1.13",
+    "sendgrid": "^5.2.3",
+    "sendgrid-mail": "0.0.2",
+    "type-graphql": "^1.1.0"
+  }
+}
